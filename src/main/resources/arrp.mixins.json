@@ -1,0 +1,12 @@
+{
+  "required": true,
+  "package": "net.devtech.arrp.mixin",
+  "compatibilityLevel": "JAVA_11",
+  "mixins": [
+    "FileResourcePackProviderMixin",
+    "LifecycledResourceManagerImplMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}
