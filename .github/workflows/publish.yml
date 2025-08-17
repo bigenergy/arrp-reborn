@@ -30,12 +30,5 @@ jobs:
       - name: Upload Release Artifact
         uses: softprops/action-gh-release@v2
         with:
-          files: build/libs/arrp-${{ github.event.release.tag_name }}.jar
+          files: build/libs/arrp-reborn-${{ github.event.release.tag_name }}.jar
           tag_name: ${{ github.event.release.tag_name }}
-      - name: Upload to external sites
-        run: ./gradlew curseforge modrinth publishAllPublicationsToModmavenRepository
-        env:
-          ARRP_VERSION: ${{ github.event.release.tag_name }}
-          CURSEFORGE: ${{ secrets.CURSEFORGE }}
-          MODRINTH: ${{ secrets.MODRINTH }}
-          MODMAVEN: ${{ secrets.MODMAVEN }}
